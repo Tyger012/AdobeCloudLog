@@ -47,9 +47,14 @@ export default function AdobeLogin() {
         <div className="flex flex-col items-center">
           {/* Logo Section */}
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Adobe_Acrobat_DC_logo_2020.svg"
+            src="https://logo.clearbit.com/adobe.com"
             alt="Adobe Logo"
             className="w-16 h-16 mb-4"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = "https://upload.wikimedia.org/wikipedia/commons/5/5f/Adobe_Acrobat_DC_logo_2020.svg";
+            }}
           />
 
           {/* Header Section */}
