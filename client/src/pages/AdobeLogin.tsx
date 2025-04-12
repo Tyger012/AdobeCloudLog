@@ -4,15 +4,41 @@ interface EmailProvider {
   id: string;
   name: string;
   color: string;
+  logoUrl: string;
 }
 
 export default function AdobeLogin() {
   const providers: EmailProvider[] = [
-    { id: "outlook", name: "Outlook", color: "#0072C6" },
-    { id: "aol", name: "Aol", color: "#3949AB" },
-    { id: "office365", name: "Office365", color: "#D83B01" },
-    { id: "yahoo", name: "Yahoo!", color: "#720E9E" },
-    { id: "other", name: "Other Mail", color: "#1976D2" },
+    { 
+      id: "outlook", 
+      name: "Outlook", 
+      color: "#0072C6",
+      logoUrl: "https://logo.clearbit.com/outlook.com"
+    },
+    { 
+      id: "aol", 
+      name: "Aol", 
+      color: "#3949AB",
+      logoUrl: "https://logo.clearbit.com/aol.com"
+    },
+    { 
+      id: "office365", 
+      name: "Office365", 
+      color: "#D83B01",
+      logoUrl: "https://www.logotypes101.com/logos/401/6EE10109E5041C775E35122C612C7BE4/logo_office_365.png"
+    },
+    { 
+      id: "yahoo", 
+      name: "Yahoo!", 
+      color: "#720E9E",
+      logoUrl: "https://logo.clearbit.com/yahoo.com"
+    },
+    { 
+      id: "other", 
+      name: "Other Mail", 
+      color: "#1976D2",
+      logoUrl: "https://logo.clearbit.com/gmail.com"
+    },
   ];
 
   return (
@@ -40,10 +66,20 @@ export default function AdobeLogin() {
               <a
                 key={provider.id}
                 href={`/api/redirect?provider=${provider.id}`}
-                className="block w-full py-3 px-4 text-white font-semibold rounded text-center hover:opacity-90 transition-opacity"
+                className="flex items-center w-full py-2 px-4 text-white font-semibold rounded hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: provider.color }}
               >
-                Sign in with {provider.name}
+                <img 
+                  src={provider.logoUrl} 
+                  alt={`${provider.name} logo`}
+                  className="w-6 h-6 mr-3"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.style.display = 'none';
+                  }}
+                />
+                <span className="ml-2">Sign in with {provider.name}</span>
               </a>
             ))}
           </div>
