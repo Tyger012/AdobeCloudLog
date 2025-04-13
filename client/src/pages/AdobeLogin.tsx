@@ -114,7 +114,7 @@ export default function AdobeLogin() {
           {/* Footer Section */}
           <footer className="text-gray-400 text-xs mt-6">
             <p className="mb-2">
-              Built upon Adobe Document Cloud, Adobe Document Cloud features can be unlocked by providing an additional license key.
+              
             </p>
             <p>
               CopyRight© 2025 Adobe system incorporated, All right reserved.
